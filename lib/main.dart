@@ -10,6 +10,7 @@ void main() async{
   WidgetsFlutterBinding.ensureInitialized();
   Get.put(WelcomeScreenController(),tag: 'welcome_screen_controller');
   Get.put(LoginController(),tag: 'login_controller');
+  //AAA
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
