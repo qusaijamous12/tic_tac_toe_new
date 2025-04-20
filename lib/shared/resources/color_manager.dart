@@ -8,4 +8,6 @@ class ColorManager{
   static const Color kDarkGrey=Color(0xff575757);
   static const Color kBottomBarColor=Color(0xff212835);
   static const Color kGameHistoryCellColor=Color(0xff12161F);
+  static const Color kGreen=Color(0xff00A682);
+  static const Color kYellow=Color(0xffFFB048);
 }

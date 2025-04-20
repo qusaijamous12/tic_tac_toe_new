@@ -6,6 +6,9 @@ import '../../../shared/resources/color_manager.dart';
 import '../../../shared/resources/font_manager.dart';
 import '../../../shared/resources/spaces_manager.dart';
 import '../../../shared/resources/style_manager.dart';
+import 'widgets/game_history_cell.dart';
+import 'widgets/score_board_cell.dart';
+import 'widgets/wins_lose_draws.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -49,132 +52,20 @@ class HomeScreen extends StatelessWidget {
               height: PaddingManager.kPadding*1.5,
             ),
             //Wins And Loses Widgets
-            Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text(
-                        '0',
-                        style: getMediumTextStyle(color: ColorManager.kPrimary),
-                      ),
-                      Text(
-                        'Wins',
-                        style: getRegulerTextStyle(color: ColorManager.kDarkGrey),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 40,
-                  width: 1,
-                  color:ColorManager.kBottomBarColor ,
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text(
-                        '0',
-                        style: getMediumTextStyle(color: ColorManager.kPrimary),
-                      ),
-                      Text(
-                        'Wins',
-                        style: getRegulerTextStyle(color: ColorManager.kDarkGrey),
-                      )
-                    ],
-                  ),
-                ),
-                Container(
-                  height: 40,
-                  width: 1,
-                  color:ColorManager.kBottomBarColor ,
-                ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Text(
-                        '0',
-                        style: getMediumTextStyle(color: ColorManager.kPrimary),
-                      ),
-                      Text(
-                        'Wins',
-                        style: getRegulerTextStyle(color: ColorManager.kDarkGrey),
-                      )
-                    ],
-                  ),
-                )
-              ],
-            ),
+
+           const  WinsLoseDraws(),
+
             const SizedBox(
               height: PaddingManager.kPadding*2,
             ),
 
 
             //Empty Cell
-            Align(
-              alignment: AlignmentDirectional.topStart,
-              child: Text(
-                'Game History',
-                style: getBoldTextStyle(color: ColorManager.kPrimary),
-              ),
-            ),
+            const GameHistoryCell(),
             const SizedBox(
               height: PaddingManager.kPadding/2,
             ),
-            Container(
-              height: 150,
-              alignment: AlignmentDirectional.center,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                color: ColorManager.kGameHistoryCellColor,
-                borderRadius: BorderRadiusDirectional.circular(PaddingManager.kPadding/2)
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Empty',
-                    style: getMediumTextStyle(color: ColorManager.kPrimary),
-                  ),
-                  Text(
-                    'Play Some Games',
-                    style: getMediumTextStyle(color: ColorManager.kDarkGrey),
-                  )
-                ],
-              ),
-            ),
-            const SizedBox(
-              height: PaddingManager.kPadding/2,
-            ),
-            Align(
-              alignment: AlignmentDirectional.topStart,
-              child: Text(
-                'ScoreBoard',
-                style: getBoldTextStyle(color: ColorManager.kPrimary),
-              ),
-            ),
-            Container(
-              height: 150,
-              alignment: AlignmentDirectional.center,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                  color: ColorManager.kGameHistoryCellColor,
-                  borderRadius: BorderRadiusDirectional.circular(PaddingManager.kPadding/2)
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Empty',
-                    style: getMediumTextStyle(color: ColorManager.kPrimary),
-                  ),
-                  Text(
-                    'Start Playing Folks',
-                    style: getMediumTextStyle(color: ColorManager.kDarkGrey),
-                  )
-                ],
-              ),
-            ),
+            const ScoreBoardCell(),
 
 
 
